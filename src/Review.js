@@ -38,6 +38,7 @@ const Review = () => {
 
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
+    // edge case when by chance the random number is the same, add 1 then
     if (randomNumber === index) {
       randomNumber = index + 1;
     }
