@@ -21,6 +21,7 @@ const Review = () => {
   };
 
   const nextPerson = () => {
+    // to make sure its keeping track of current / prev state, we useState like below
     setIndex((index) => {
       let newIndex = index + 1;
       return checkNumber(newIndex);
@@ -28,10 +29,19 @@ const Review = () => {
   };
 
   const prevPerson = () => {
+    // to make sure its keeping track of current / prev state, we useState like below
     setIndex((index) => {
       let newIndex = index - 1;
       return checkNumber(newIndex);
     });
+  };
+
+  const randomPerson = () => {
+    let randomNumber = Math.floor(Math.random() * people.length);
+    if (randomNumber === index) {
+      randomNumber = index + 1;
+    }
+    setIndex(checkNumber(randomNumber));
   };
 
   return (
@@ -53,7 +63,7 @@ const Review = () => {
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn' title="Random review">
+      <button className='random-btn' title="Random review" onClick={randomPerson}>
         surprise me
       </button>
     </article>
