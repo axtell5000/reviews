@@ -53,65 +53,80 @@ Global Styles
 *,
 ::after,
 ::before {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
 }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--clr-grey-10);
   color: var(--clr-grey-1);
-  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 0.875rem;
+  line-height: 1.5;  
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
+  letter-spacing: var(--spacing);  
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  text-transform: capitalize;
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
-  margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
+  margin-bottom: 1.25rem;  
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -122,10 +137,10 @@ p {
 /*  global classes */
 
 /* section */
-.section {
-  width: 90vw;
+.section {  
   margin: 0 auto;
   max-width: var(--max-width);
+  width: 90vw;
 }
 
 @media screen and (min-width: 992px) {
@@ -140,112 +155,128 @@ Reviews
 ===============
 */
 main {
-  min-height: 100vh;
   display: grid;
+  min-height: 100vh;  
   place-items: center;
 }
+
 .title {
-  text-align: center;
   margin-bottom: 4rem;
+  text-align: center; 
 }
+
 .underline {
-  height: 0.25rem;
-  width: 5rem;
   background: var(--clr-primary-5);
+  height: 0.25rem;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
+  width: 5rem;
 }
+
 .container {
-  width: 80vw;
   max-width: var(--fixed-width);
+  width: 80vw;
 }
+
 .review {
   background: var(--clr-white);
-  padding: 1.5rem 2rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
-  transition: var(--transition);
+  padding: 1.5rem 2rem;
   text-align: center;
+  transition: var(--transition);  
 }
+
 .review:hover {
   box-shadow: var(--dark-shadow);
 }
-.img-container {
-  position: relative;
-  width: 150px;
-  height: 150px;
+
+.img-container {  
   border-radius: 50%;
+  height: 150px;
   margin: 0 auto;
   margin-bottom: 1.5rem;
+  position: relative;
+  width: 150px;
 }
+
 .person-img {
-  width: 100%;
+  border-radius: 50%;
   display: block;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: cover;  
   position: relative;
+  width: 100%;
 }
+
 .quote-icon {
+  background: var(--clr-primary-5);
+  border-radius: 50%;
+  color: var(--clr-white);
+  display: grid;
+  height: 2.5rem;
+  left: 0;  
+  place-items: center;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
   transform: translateY(25%);
-  background: var(--clr-primary-5);
-  color: var(--clr-white);
+  width: 2.5rem;
 }
+
 .img-container::before {
-  content: '';
-  width: 100%;
-  height: 100%;
   background: var(--clr-primary-5);
+  border-radius: 50%;
+  content: '';  
+  height: 100%;  
   position: absolute;
   top: -0.25rem;
-  right: -0.5rem;
-  border-radius: 50%;
+  right: -0.5rem;  
+  width: 100%;
 }
+
 .author {
   margin-bottom: 0.25rem;
 }
+
 .job {
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
   color: var(--clr-primary-5);
   font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
+
 .info {
   margin-bottom: 0.75rem;
 }
+
 .prev-btn,
 .next-btn {
-  color: var(--clr-primary-7);
-  font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
-  margin: 0 0.5rem;
-  transition: var(--transition);
+  color: var(--clr-primary-7);
   cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+  transition: var(--transition);  
 }
+
 .prev-btn:hover,
 .next-btn:hover {
   color: var(--clr-primary-5);
 }
-.random-btn {
-  margin-top: 0.5rem;
+
+.random-btn {  
   background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
-  padding: 0.25rem 0.5rem;
-  text-transform: capitalize;
-  border-radius: var(--radius);
-  transition: var(--transition);
   border-color: transparent;
-  cursor: pointer;
+  border-radius: var(--radius);
+  color: var(--clr-primary-5);
+  cursor: pointer; 
+  margin-top: 0.5rem; 
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;  
+  transition: var(--transition);
 }
+
 .random-btn:hover {
   background: var(--clr-primary-5);
   color: var(--clr-primary-1);
